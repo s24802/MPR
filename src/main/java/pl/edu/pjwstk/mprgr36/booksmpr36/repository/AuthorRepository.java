@@ -18,10 +18,13 @@ public class AuthorRepository {
     }
     public void deleteAuthor(Long id) {
         authorHashMap.remove(id);
-
     }
-    public Author getAuthorbyId(Long id) {
+    public Author getAuthorById(Long id) {
         return authorHashMap.get(id);
+    }
+    public Author updateAuthor(Author author) {
+        authorHashMap.put(author.getId(),author);
+        return author;
     }
 
     private Long findMaxId(){

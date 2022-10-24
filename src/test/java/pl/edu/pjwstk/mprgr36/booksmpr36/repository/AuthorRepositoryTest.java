@@ -40,13 +40,13 @@ class AuthorRepositoryTest {
         Author a = new Author();
         authorRepository.createAuthor(a);
         authorRepository.deleteAuthor(a.getId());
-        assertNull(authorRepository.getAuthorbyId(a.getId()));
+        assertNull(authorRepository.getAuthorById(a.getId()));
     }
 
     @Test
     void getAuthorById() {
         Author a = new Author();
         authorRepository.createAuthor(a);
-        assertNotNull(authorRepository.getAuthorbyId(a.getId()));
+        assertNotNull(authorRepository.getAuthorById(a.getId()));
     }
 }
